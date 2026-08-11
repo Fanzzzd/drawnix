@@ -4,6 +4,7 @@
   "categories": {
     "correctness": "error"
   },
+  "ignorePatterns": ["packages/drawnix/dist/**"],
   "rules": {},
   "env": {
     "builtin": true

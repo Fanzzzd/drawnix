@@ -1,0 +1,15 @@
+import { PlaitBoard, PlaitElement, Point, Selection, ThemeColorMode } from '@plait/core';
+import { Freehand, FreehandShape } from './type';
+import { FreehandDrawOptions } from './presets';
+export declare function getFreehandPointers(): FreehandShape[];
+export declare const getFreehandDrawOptions: (board: PlaitBoard) => Partial<FreehandDrawOptions>;
+export declare const createFreehandElement: (shape: FreehandShape, points: Point[], drawOptions?: Partial<FreehandDrawOptions>) => Freehand;
+export declare const isHitFreehand: (board: PlaitBoard, element: Freehand, point: Point) => boolean;
+export declare const isRectangleHitFreehand: (board: PlaitBoard, element: Freehand, selection: Selection) => boolean;
+export declare const getSelectedFreehandElements: (board: PlaitBoard) => Freehand[];
+export declare const getFreehandDefaultStrokeColor: (theme: ThemeColorMode) => string;
+export declare const getFreehandDefaultFill: (theme: ThemeColorMode) => string;
+export declare const getStrokeColorByElement: (board: PlaitBoard, element: PlaitElement) => any;
+export declare const getFillByElement: (board: PlaitBoard, element: PlaitElement) => any;
+export declare function gaussianWeight(x: number, sigma: number): number;
+export declare function gaussianSmooth(points: Point[], sigma: number, windowSize: number): Point[];

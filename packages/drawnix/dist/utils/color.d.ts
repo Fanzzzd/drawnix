@@ -1,0 +1,12 @@
+import { PlaitBoard } from '@plait/core';
+export declare function applyOpacityToHex(hexColor: string, opacity: number): string;
+export declare function hexAlphaToOpacity(hexColor: string): number;
+export declare function isValidColor(color: string): boolean;
+export declare function removeHexAlpha(hexColor: string): string;
+export declare function isTransparent(color?: string): color is "TRANSPARENT";
+export declare function isWhite(color?: string): boolean;
+export declare function isFullyTransparent(opacity: number): opacity is 0;
+export declare function isFullyOpaque(opacity: number): opacity is 100;
+export declare function isNoColor(value: string): value is "NO_COLOR";
+export declare function isDefaultStroke(color?: string): boolean;
+export declare function getBackgroundColor(board: PlaitBoard): string | undefined;
