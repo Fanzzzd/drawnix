@@ -4,6 +4,10 @@
 dist
 !packages/drawnix/dist/
 !packages/drawnix/dist/**
+!packages/react-board/dist/
+!packages/react-board/dist/**
+!packages/react-text/dist/
+!packages/react-text/dist/**
 tmp
 /out-tsc
 

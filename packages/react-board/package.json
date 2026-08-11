@@ -1,24 +1,38 @@
 {
   "name": "@plait-board/react-board",
-  "version": "0.4.0",
+  "version": "0.4.0-plany.1",
   "private": false,
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js",
-      "types": "./index.d.ts"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "dependencies": {
-    "@plait/common": "^0.93.1",
-    "@plait/core": "^0.93.1",
-    "@plait/draw": "^0.93.1",
-    "@plait/layouts": "^0.93.1",
-    "@plait/mind": "^0.93.1",
-    "@plait/text-plugins": "^0.93.1",
+    "@plait-board/react-text": "github:Fanzzzd/drawnix#plany-package&path:packages/react-text",
+    "@plait/common": "^0.93.4",
+    "@plait/core": "^0.93.4",
+    "@plait/draw": "^0.93.4",
+    "@plait/layouts": "^0.93.4",
+    "@plait/mind": "^0.93.4",
+    "@plait/text-plugins": "^0.93.4",
     "ahooks": "^3.8.0",
-    "classnames": "^2.5.1"
+    "classnames": "^2.5.1",
+    "roughjs": "^4.6.6",
+    "slate": "^0.116.0",
+    "slate-dom": "0.116.0",
+    "slate-history": "0.115.0",
+    "slate-react": "^0.116.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0 || ^19.0.0",
+    "react-dom": "^18.3.0 || ^19.0.0"
   }
 }

@@ -6,7 +6,7 @@
   "printWidth": 100,
   "ignorePatterns": [
     ".claude/**",
-    "packages/drawnix/dist/**",
+    "packages/*/dist/**",
     "**/*.md",
     "package-lock.json",
     "**/*.scss",
