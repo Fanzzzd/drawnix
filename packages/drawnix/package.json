@@ -23,6 +23,7 @@
     "@plait/common": "^0.93.4",
     "@plait/core": "^0.93.4",
     "@plait/draw": "^0.93.4",
+    "@plait/layouts": "^0.93.4",
     "@plait/mind": "^0.93.4",
     "@plait/text-plugins": "^0.93.4",
     "classnames": "^2.5.1",
