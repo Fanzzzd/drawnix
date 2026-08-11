@@ -1,8 +1,14 @@
-import { BoardChangeData } from '@plait-board/react-board';
-import { PlaitBoard, PlaitElement, PlaitTheme, Selection, ThemeColorMode, Viewport } from '@plait/core';
+import { PlaitBoard, PlaitElement, PlaitOperation, PlaitTheme, Selection, ThemeColorMode, Viewport } from '@plait/core';
 import { default as React } from 'react';
 import { DrawnixToolState } from './hooks/use-drawnix';
 import { Language } from './i18n/types';
+export type DrawnixBoardChangeData = {
+    children: PlaitElement[];
+    operations: PlaitOperation[];
+    viewport: Viewport;
+    selection: Selection | null;
+    theme: PlaitTheme;
+};
 export type DrawnixProps = {
     value: PlaitElement[];
     viewport?: Viewport;
@@ -13,7 +19,7 @@ export type DrawnixProps = {
         exportTransparent?: boolean;
     };
     initialLanguage?: Language;
-    onChange?: (value: BoardChangeData) => void;
+    onChange?: (value: DrawnixBoardChangeData) => void;
     onSelectionChange?: (selection: Selection | null) => void;
     onValueChange?: (value: PlaitElement[]) => void;
     onViewportChange?: (value: Viewport) => void;

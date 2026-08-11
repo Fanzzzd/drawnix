@@ -24,13 +24,3 @@ for (const packageName of packageNames) {
     );
   }
 }
-
-// Drawnix's documented single CSS import must also carry the two externalized
-// React view packages' base styles.
-const drawnixCss = packageNames.map((packageName) =>
-  fs.readFileSync(path.join(root, 'dist', packageName, 'index.css'), 'utf8')
-);
-fs.writeFileSync(
-  path.join(root, 'packages', 'drawnix', 'dist', 'index.css'),
-  drawnixCss.join('\n')
-);

@@ -1,8 +1,9 @@
-import { Board, BoardChangeData, Wrapper } from '@plait-board/react-board';
+import { Board, Wrapper } from '@plait-board/react-board';
 import {
   PlaitBoard,
   PlaitBoardOptions,
   PlaitElement,
+  PlaitOperation,
   PlaitPlugin,
   PlaitPointerType,
   PlaitTheme,
@@ -47,6 +48,14 @@ import { Tutorial } from './components/tutorial';
 import { LASER_POINTER_CLASS_NAME } from './utils/laser-pointer';
 import { Toast, useToast } from './components/toast/toast';
 
+export type DrawnixBoardChangeData = {
+  children: PlaitElement[];
+  operations: PlaitOperation[];
+  viewport: Viewport;
+  selection: Selection | null;
+  theme: PlaitTheme;
+};
+
 export type DrawnixProps = {
   value: PlaitElement[];
   viewport?: Viewport;
@@ -57,7 +66,7 @@ export type DrawnixProps = {
     exportTransparent?: boolean;
   };
   initialLanguage?: Language;
-  onChange?: (value: BoardChangeData) => void;
+  onChange?: (value: DrawnixBoardChangeData) => void;
   onSelectionChange?: (selection: Selection | null) => void;
   onValueChange?: (value: PlaitElement[]) => void;
   onViewportChange?: (value: Viewport) => void;
@@ -237,7 +246,7 @@ export const Drawnix: React.FC<DrawnixProps> = ({
             theme={theme}
             options={options}
             plugins={plugins}
-            onChange={(data: BoardChangeData) => {
+            onChange={(data: DrawnixBoardChangeData) => {
               onChange?.(data);
             }}
             onSelectionChange={onSelectionChange}

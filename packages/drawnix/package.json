@@ -20,7 +20,6 @@
     "@floating-ui/react": "^0.26.24",
     "@plait-board/markdown-to-drawnix": "^0.0.8",
     "@plait-board/mermaid-to-drawnix": "^0.0.7",
-    "@plait-board/react-board": "github:Fanzzzd/drawnix#plany-package&path:packages/react-board",
     "@plait/common": "^0.93.4",
     "@plait/core": "^0.93.4",
     "@plait/draw": "^0.93.4",
